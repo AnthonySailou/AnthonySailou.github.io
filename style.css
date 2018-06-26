@@ -4,6 +4,13 @@ body {
     font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/***************************************************/
+
 nav {
     position: fixed;
     top: 0;
@@ -15,13 +22,11 @@ nav {
     transition: .3s;
     background: rgb(255, 255, 255);
 }
-
 nav.scrollnav {
     background: #FFFC;
     height: 100px;
     padding: 10px 100px;
 }
-
 nav .logo{
     padding: 22px 20px;
     height: 80px;
@@ -34,7 +39,6 @@ nav.black .logo {
     color: #fff;
 }
 */
-
 nav ul {
     list-style: none;
     float: right;
@@ -42,49 +46,172 @@ nav ul {
     padding: 0;
     display: flex;
 }
-
 nav ul li {
     list-style: none;
 }
-
 nav ul li a {
     line-height: 80px;
     color: #000;
+    font-size: 24px;
     padding: 12px 30px;
     text-decoration: none;
     text-transform: uppercase;
     transition: .3s;
 }
-
 nav.black ul li a {
     color: #fff;
 }
-
 nav ul li a:focus {
     outline: none;
 }
-
+nav ul li:hover {
+    background: #0006;
+    transition: .5s;
+}
+/*
 nav ul li a.active {
     background: #fff;
     color: #000;
 }
+*/
+
+/*************************************************************/
 
 section.sec1 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr; 
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     background: url(storybridge.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.content{
-    margin-top: 80px;
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 35%;
+    margin-bottom: 40%;
+    background-color: #fff;
 }
 
-.content p  {
+.aboutdesc{
+    padding-top: 1em;
+    margin: 1em;
+}
+
+.aboutdesc h6{
+    line-height: 0%;
+}
+
+.aboutdesc p {
+    font-size: 18px;
+}
+/*
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+*/
+
+
+/***************************************************/
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: 50px;
+    border-top: 1px solid #0003;
+}
+/*
+.contentj p  {
     width: 900px;
     margin: 30px auto;
     text-align: justify;
     font-size: 20px;
     line-height: 30px;
+}*/
+
+.content h2{
+    color: #000;
+    font-size: 28px;
+    padding: 12px 30px 0px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.content h4{
+    text-align: center;
+}
+.content h4.right {
+    text-align: right;
+}
+.content h4.left {
+    text-align: left;
+}
+
+.content h5.right {
+    text-align: right;
+}
+
+.content ul li {
+    font-size: 18px;
+}
+
+.projects{
+    /*
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 100px;
+    */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        'hotel corey website'
+        'hotel corey stock';
+    grid-column-gap: 60px;
+
+}
+.hotel{
+    grid-area: hotel;
+}
+.corey{
+    grid-area: corey;
+}
+.website{
+    grid-area: website;
+}
+
+.stock {
+    grid-area: stock;
+}
+
+.education{
+    display: grid;
+    grid-template-rows: 1fr; /*repeat(2, 1fr);*/
+}
+
+.edu{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    border-bottom: 1px solid #0003;
+}
+
+.skills{
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+}
+.skill{
+    text-align: center;
 }
