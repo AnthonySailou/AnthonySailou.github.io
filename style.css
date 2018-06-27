@@ -172,11 +172,11 @@ nav ul li a.active {
     text-align: left;
 }  
 
-p .right{
+p.right{
     text-align: right;
 }
 
-p .left{
+p.left{
     text-align: left;
 }
 
