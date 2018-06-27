@@ -170,6 +170,14 @@ nav ul li a.active {
 }
 .content h4.left {
     text-align: left;
+}  
+
+p .right{
+    text-align: right;
+}
+
+p .left{
+    text-align: left;
 }
 
 .right {
