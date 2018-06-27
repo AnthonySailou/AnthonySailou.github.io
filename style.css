@@ -23,11 +23,11 @@ nav {
     background: rgb(255, 255, 255);
 }
 nav.scrollnav {
-    background: #FFFC;
+    background: #FFFD;
     height: 100px;
     padding: 10px 100px;
 }
-nav .logo{
+nav .name{
     padding: 22px 20px;
     height: 80px;
     float: left;
@@ -35,10 +35,11 @@ nav .logo{
     transition: .3s;
 }
 /*
-nav.black .logo {
+nav.black .name {
     color: #fff;
 }
 */
+
 nav ul {
     list-style: none;
     float: right;
@@ -46,6 +47,7 @@ nav ul {
     padding: 0;
     display: flex;
 }
+
 nav ul li {
     list-style: none;
 }
@@ -58,6 +60,7 @@ nav ul li a {
     text-transform: uppercase;
     transition: .3s;
 }
+
 nav.black ul li a {
     color: #fff;
 }
@@ -65,8 +68,9 @@ nav ul li a:focus {
     outline: none;
 }
 nav ul li:hover {
-    background: #0006;
-    transition: .5s;
+    background: #0003;
+    transition: .3s;
+
 }
 /*
 nav ul li a.active {
@@ -76,16 +80,24 @@ nav ul li a.active {
 */
 
 /*************************************************************/
-
-section.sec1 {
+.sec1 {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr; 
     width: 100%;
     height: 95vh;
     background: url(storybridge.jpg);
+    background-attachment: fixed; /*parallax*/
+    background-repeat: no-repeat; /*parallax*/
     background-size: cover;
     background-position: center;
 }
+
+@media only screen and (max-device-width: 1366px){
+    .sec1 {
+        background-attachment: scroll;
+    }
+}
+
 
 .about {
     display: grid;
@@ -129,7 +141,7 @@ section.sec1 {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     margin-top: 50px;
-    border-top: 1px solid #0003;
+    border-top: 1.5px solid #0003;
 }
 /*
 .contentj p  {
@@ -196,6 +208,16 @@ section.sec1 {
     grid-area: stock;
 }
 
+
+.skills{
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+}
+.skill{
+    text-align: center;
+}
+
+
 .education{
     display: grid;
     grid-template-rows: 1fr; /*repeat(2, 1fr);*/
@@ -206,12 +228,4 @@ section.sec1 {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
     border-bottom: 1px solid #0003;
-}
-
-.skills{
-    display: grid;
-    grid-template-rows: repeat(3, min-content);
-}
-.skill{
-    text-align: center;
 }
