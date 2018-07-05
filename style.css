@@ -1,242 +1,180 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+ 
 body {
-    margin: 0;
-    padding: 0;
-    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+      font-family: "Arial",sans-serif;
+}
+ 
+header {
+      width: 100%;
+      height: 70vh;
+      background: url(media/storybridge.jpg) no-repeat 50% 50%;
+      background-size: cover;
 }
 
-a {
-    color: black;
-    text-decoration: none;
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
 }
-
-/***************************************************/
-
+ 
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    padding: 10px 100px;
-    box-sizing: border-box;
-    transition: .3s;
-    background: rgb(255, 255, 255);
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
 }
-nav.scrollnav {
-    background: #FFFD;
-    height: 100px;
-    padding: 10px 100px;
-}
-nav .name{
-    padding: 22px 20px;
-    height: 80px;
-    float: left;
-    font-size: 40px;
-    transition: .3s;
-}
-/*
-nav.black .name {
-    color: #fff;
-}
-*/
-
+ 
 nav ul {
-    list-style: none;
-    float: right;
-    margin: 0;
-    padding: 0;
-    display: flex;
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
 }
-
+ 
+nav.black ul {
+      background: #000;
+}
+ 
 nav ul li {
-    list-style: none;
+      display: inline-block;
+      padding: 16px 40px;;
 }
+ 
 nav ul li a {
-    line-height: 80px;
-    color: #000;
-    font-size: 24px;
-    padding: 12px 30px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: .3s;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+}
+ 
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
 }
 
-nav.black ul li a {
-    color: #fff;
+.center-body {
+    padding-top: 10%;
 }
-nav ul li a:focus {
-    outline: none;
-}
-nav ul li:hover {
-    background: #0003;
-    transition: .3s;
 
+.center {
+    margin: 0 auto;
+    width: 35%;
+    height: 40%; 
+    padding: 5px;
+    background: white;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
-/*
-nav ul li a.active {
-    background: #fff;
-    color: #000;
-}
-*/
 
-/*************************************************************/
-.sec1 {
+.photo {
+    padding-right: 1em;
+    max-width: 35%;
+    float: left;
+}
+
+.content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr; 
-    width: 100%;
-    height: 95vh;
-    background: url(media/storybridge.jpg);
-    background-attachment: fixed; /*parallax*/
-    background-repeat: no-repeat; /*parallax*/
-    background-size: cover;
-    background-position: center;
-}
+    grid-auto-rows: minmax(min-cotent, auto);
 
-@media only screen and (max-device-width: 1366px){
-    .sec1 {
-        background-attachment: scroll;
-    }
-}
-
-
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 35%;
-    margin-bottom: 40%;
-    background-color: #fff;
-}
-
-.aboutdesc{
-    padding-top: 1em;
-    margin: 1em;
-}
-
-.aboutdesc h6{
-    line-height: 0%;
-}
-
-.aboutdesc p {
-    font-size: 18px;
-}
-/*
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-*/
-
-
-/***************************************************/
-
-.content{
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    margin-top: 50px;
-    border-top: 1.5px solid #0003;
-}
-/*
-.contentj p  {
-    width: 900px;
-    margin: 30px auto;
-    text-align: justify;
+    width: 80%;
+    margin: 4em auto;    
     font-size: 20px;
     line-height: 30px;
-}*/
 
-.content h2{
-    color: #000;
-    font-size: 28px;
-    padding: 12px 30px 0px;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    transition: .3s;
-}
-
-.content h4{
-    text-align: center;
-}
-.content h4.right {
-    text-align: right;
-}
-.content h4.left {
-    text-align: left;
-}  
-
-p.right{
-    text-align: right;
-}
-
-p.left{
-    text-align: left;
-}
-
-.right {
-    text-align: right;
-}
-.left {
-    text-align: left;
-}
-
-.content ul li {
-    font-size: 18px;
-}
-
-.projects{
-    /*
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 100px;
-    */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-        'hotel corey website'
-        'hotel corey stock';
-    grid-column-gap: 60px;
-
-}
-.hotel{
-    grid-area: hotel;
-}
-.corey{
-    grid-area: corey;
-}
-.website{
-    grid-area: website;
+        "titleproj"
+        "projects"
+        /*"titleexp"
+        "experience"*/
+        "skills"
+        "education";
 }
 
-.stock {
-    grid-area: stock;
+titleproj {
+    grid-area: titleproj;
+    text-align: center;
 }
 
-
-.skills{
+.projects {
+    grid-area: projects;
     display: grid;
-    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid #000;
 }
-.skill{
+
+.skills {
+    grid-area: skills;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+
+.education {
+    grid-area: education;
     text-align: center;
 }
 
 
-.education{
-    display: grid;
-    grid-template-rows: 1fr; /*repeat(2, 1fr);*/
+
+
+@media(max-width: 786px) {
+ 
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+
+    nav.black ul {
+        background: #000;
+    }
+
+    .showing {
+        max-height: 34em;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .center {
+        margin-top: 15%;
+    }
+
+    .projects{
+        grid-template-columns: 1fr;
+    }
+
 }
 
-.edu{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 30px;
-    border-bottom: 1px solid #0003;
-}
